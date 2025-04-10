@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Me Online - Tushar Tiwari</title>
+
+    <!-- Load the static CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Tushar's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'links' %}">Links</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section links">
+        <div class="container">
+            <h1>Find Me Online</h1>
+            <ul>
+                <li><a href="https://github.com/Torxtoise" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/tushar-tiwari-96422b222/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://wittushar.wordpress.com/" target="_blank">Blogs</a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

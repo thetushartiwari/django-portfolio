@@ -1,0 +1,249 @@
+/* 🌟 Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(24, 13, 9);
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+/* 🔹 NAVIGATION BAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(192, 66, 17);
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+  font-size: 1.1rem;
+}
+
+.left {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* 🔹 HERO SECTION */
+.firstsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.leftsection {
+  font-size: 2.5rem;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.rightsection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.rightsection img {
+  width: 90%;
+  max-width: 400px;
+}
+
+/* 🔹 COMMON SECTION STYLES */
+.section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* LINKS SECTION */
+.links h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #ffd700;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Centered List with Yellow Links */
+.links ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.links ul li {
+  margin: 15px 0;
+}
+
+.links ul li a {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.3rem;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for links */
+.links ul li a:hover {
+  background-color: #ffd700;
+  color: rgb(24, 13, 9);
+  transform: translateY(-3px);
+}
+
+/* 🔥 RESPONSIVE DESIGN FOR LINKS 📱 */
+@media (max-width: 768px) {
+  .links h1 {
+    font-size: 1.8rem;
+  }
+
+  .links ul li a {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+}
+
+
+/* PROJECTS SECTION */
+.projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects h1 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #ffd700;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Improved grid layout for project cards */
+.projects .project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  padding: 20px;
+}
+
+/* Clean and responsive project cards */
+.project {
+  width: 100%;
+  max-width: 360px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+/* Hover effect to make project cards pop */
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 🟡 Consistent Yellow Box for All Project Titles */
+.project h3 {
+  font-size: 1.4rem;
+  background-color: #ffd700;
+  color: rgb(24, 13, 9);
+  padding: 8px 12px;
+  display: inline-block;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Project Description */
+.project p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Project button with hover effect */
+.project a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ffd700;
+  color: rgb(24, 13, 9);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.project a:hover {
+  background-color: #fff;
+  color: rgb(24, 13, 9);
+  transform: scale(1.05);
+}
+
+/* 🔥 RESPONSIVE DESIGN FOR PROJECTS 📱 */
+@media (max-width: 768px) {
+  .projects h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .projects .project-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .project h3 {
+    font-size: 1.3rem;
+  }
+
+  .project p {
+    font-size: 0.9rem;
+  }
+}
