@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+import os
+# import dj_database_url  
 
 from pathlib import Path
 
@@ -19,13 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5g!1+@-s@8i3i*pdw^ce+rn8g9+%+ykeifhv$o(9$frkj&l_b2'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'insecure-default-key')
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = []
+
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'portfolioftushartiwari.onrender.com']
+
+
 
 
 # Application definition
@@ -38,7 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'frontend',
+    'markdownify',
 ]
+
+MARKDOWNIFY = {
+    "default": {
+        "WHITELIST_TAGS": ["strong", "b", "p", "em", "i", "ul", "li", "br"],
+        "MARKDOWN_EXTENSIONS": [],
+    }
+}
 
 
 
@@ -53,7 +65,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'backend.urls'
-import os  
+
+import os 
 
 TEMPLATES = [
     {
@@ -71,9 +84,12 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend', 'static'),
-]
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend', 'static')]
+
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 WSGI_APPLICATION = 'backend.wsgi.application'
@@ -88,6 +104,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
@@ -123,8 +140,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
+STATIC_URL = '/static/'
 
-STATIC_URL = 'static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

@@ -9,5 +9,9 @@ def home(request):
 def links(request):
     return render(request, 'links.html')
 
+from .models import Project  # make sure this is imported
+
 def projects(request):
-    return render(request, 'projects.html')
+    all_projects = Project.objects.all()
+    return render(request, 'projects.html', {'projects': all_projects})
+

@@ -143,7 +143,7 @@ nav ul li a:hover {
 }
 
 
-/* PROJECTS SECTION */
+/* Projects Section */
 .projects {
   padding: 60px 20px;
   text-align: center;
@@ -152,11 +152,10 @@ nav ul li a:hover {
 .projects h1 {
   font-size: 2.4rem;
   margin-bottom: 30px;
-  color: #ffd700;
+  color: yellow;
   text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
 }
 
-/* Improved grid layout for project cards */
 .projects .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -165,7 +164,6 @@ nav ul li a:hover {
   padding: 20px;
 }
 
-/* Clean and responsive project cards */
 .project {
   width: 100%;
   max-width: 360px;
@@ -178,51 +176,40 @@ nav ul li a:hover {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
-/* Hover effect to make project cards pop */
 .project:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* 🟡 Consistent Yellow Box for All Project Titles */
-.project h3 {
+.project h3 a {
   font-size: 1.4rem;
-  background-color: #ffd700;
+  background-color: yellow;
   color: rgb(24, 13, 9);
   padding: 8px 12px;
   display: inline-block;
   border-radius: 6px;
-  margin-bottom: 12px;
+  text-decoration: none;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 10px;
 }
 
-/* Project Description */
+.project h3 a:hover {
+  background-color: #fff;
+  transform: scale(1.05);
+}
+
 .project p {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 15px;
   line-height: 1.5;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 
-/* Project button with hover effect */
-.project a {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #ffd700;
-  color: rgb(24, 13, 9);
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease-in-out, transform 0.2s;
-}
-
-.project a:hover {
-  background-color: #fff;
-  color: rgb(24, 13, 9);
-  transform: scale(1.05);
-}
-
-/* 🔥 RESPONSIVE DESIGN FOR PROJECTS 📱 */
 @media (max-width: 768px) {
   .projects h1 {
     font-size: 2rem;
