@@ -13,9 +13,3 @@ A personal portfolio built using Django. Deployed on Render.
 
 ## Deployment
 Configured for Render using `render.yaml` and `Procfile`.
-
-## Setup
-```bash
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
